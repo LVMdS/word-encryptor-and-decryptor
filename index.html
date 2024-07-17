@@ -7,22 +7,35 @@
     <title>Decodificador de Texto</title>
 </head>
 <body>
-    <header>
-        <h1>Decodificador de Texto</h1>
-    </header>
-    <main>
-        <section class="container">
-            <textarea id="inputText" placeholder="Digite o texto aqui..."></textarea>
-            <div class="buttons">
-                <button onclick="encodeText()">Codificar</button>
-                <button onclick="decodeText()">Decodificar</button>
+    <div class="container">
+        <div class="header">
+            <div class="logo"><img src="" alt=""></div>
+            <div class="menu-toggle"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="panel-title">Insira o texto para codificar/descodificar:</div>
+                <div class="textarea-container">
+                    <textarea id="inputText" placeholder="Insira o texto aqui... *" rows="6"></textarea>
+                </div>
+                <div class="button-container">
+                    <button class="button encrypt-button">Codificar</button>
+                    <button class="button decrypt-button">Descodificar</button>
+                </div>
             </div>
-            <textarea id="outputText" placeholder="Resultado..."></textarea>
-        </section>
-    </main>
-    <footer>
-        <p> Desenvolvido por Leonardo </p>
-    </footer>
+            <div class="right-panel">
+                <div class="panel-title">Resultado:</div>
+                <div class="result-container">
+                    <textarea id="outputText" readonly rows="6"></textarea>
+                </div>
+            </div>     
+        </div> 
+            <p class="info-paragraph">* Apenas letras maiúsculas e minúsculas são permitidas, sem acentos.</p>           
+        <div class="footer">
+            <p class="footer-text">© 2024 Decodificador de Texto. Todos os direitos reservados.</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
