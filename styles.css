@@ -39,22 +39,25 @@ body {
 .main-content {
     display: flex;
     gap: 20px;
+    position: relative;
 }
 
 .left-panel{
-    flex: 0.7;
-    background-color: #FFFFFF;
+    background-color: #F3F5FC;
     padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
 }
+
 .right-panel {
-    flex: 0.3;
+    margin-left: 20%;
+    margin-right: 5%;
+    flex: 1;
     background-color: #FFFFFF;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
+
 .panel-title {
     font-size: 24px;
     font-weight: bold;
@@ -110,6 +113,22 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 8px;
     resize: vertical;
+}
+.copy-button {
+    margin-top: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #0A3871;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.copy-button:hover {
+    background-color: #064c91;
 }
 
 .info-paragraph {

@@ -3,17 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const outputText = document.getElementById('outputText');
     const encryptButton = document.querySelector('.encrypt-button');
     const decryptButton = document.querySelector('.decrypt-button');
+    const copyButton = document.querySelector('.copy-button');
 
     encryptButton.addEventListener('click', function() {
         const text = inputText.value;
         const encryptedText = encrypt(text);
         outputText.value = encryptedText;
+        inputText.value = ''; // Limpar o campo de entrada após a criptografia
     });
 
     decryptButton.addEventListener('click', function() {
-        const text = inputText.value;
+        const text = outputText.value;
         const decryptedText = decrypt(text);
         outputText.value = decryptedText;
+    });
+
+    copyButton.addEventListener('click', function() {
+        outputText.select();
+        outputText.setSelectionRange(0, 99999); /* Para dispositivos móveis */
+        document.execCommand('copy');
+        alert('Texto copiado para a área de transferência!');
     });
 
     function encrypt(text) {
