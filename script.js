@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     decryptButton.addEventListener('click', function() {
-        const text = outputText.value;
+        const text = inputText.value;
         const decryptedText = decrypt(text);
         outputText.value = decryptedText;
+        inputText.value = ''; // Limpar o campo de entrada após a descriptografia
     });
 
     copyButton.addEventListener('click', function() {
         outputText.select();
-        outputText.setSelectionRange(0, 99999); /* Para dispositivos móveis */
         document.execCommand('copy');
         alert('Texto copiado para a área de transferência!');
     });
