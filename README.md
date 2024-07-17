@@ -1,5 +1,3 @@
-# word-encryptor-and-decryptor
-
 # Decodificador de Texto
 
 Este é um projeto de Decodificador de Texto que permite criptografar e descriptografar mensagens. 
