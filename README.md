@@ -28,8 +28,4 @@ O projeto foi desenvolvido com HTML, CSS e JavaScript.
 
 ## Estrutura do Projeto
 
-decodificador-texto/
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
+![alt text](est-dec.png)
