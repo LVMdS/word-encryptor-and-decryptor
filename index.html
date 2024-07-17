@@ -8,34 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo"><img src="" alt=""></div>
-            <div class="menu-toggle"></div>
+        <header>
+            <img src="./Logo A.png" alt="">
+        </header>
+        <textarea id="input-text" placeholder="Digite o texto...*"></textarea>
+        <p class="info-paragraph">*Use somente letras maiusculas ou minusculas</p>
+        <div class="buttons">
+            <button id="encrypt-btn">Criptografar</button>
+            <button id="decrypt-btn">Descriptografar</button>
         </div>
+        <textarea id="output-text" readonly placeholder="Resultado..."></textarea>
+        <button id="copy-btn">Copiar</button>
 
-        <div class="main-content">
-            <div class="left-panel">
-                <div class="panel-title">Insira o texto para codificar/descodificar:</div>
-                <div class="textarea-container">
-                    <textarea id="inputText" placeholder="Insira o texto aqui... *" rows="6"></textarea>
-                </div>
-                <p class="info-paragraph">* Apenas letras maiúsculas e minúsculas são permitidas, sem acentos.</p> 
-                <div class="button-container">
-                    <button class="button encrypt-button">Codificar</button>
-                    <button class="button decrypt-button">Descodificar</button>
-                </div>
-            </div>
-            <div class="right-panel">
-                <div class="panel-title">Resultado:</div>
-                <div class="result-container">
-                    <textarea id="outputText" readonly placeholder="Texto codificado será exibido aqui..." rows="6"></textarea>
-                    <button class="copy-button" onclick="copiarTexto()">Copiar</button>
-                </div>
-            </div>     
-        </div> 
-                      
         <div class="footer">
-            <p class="footer-text">© 2024 Decodificador de Texto. Todos os direitos reservados.</p>
+            <p class="footer-text">&#169 2024 Decodificador de Texto. Todos os direitos reservados.<br> Desenvolvido por Leonardo  &#174 </p>
         </div>
     </div>
     <script src="script.js"></script>

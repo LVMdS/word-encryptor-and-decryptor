@@ -1,144 +1,120 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #F3F5FC;
-}
-
-.container {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.header {
+    background: #F3F5FC;
+    color: #b9c6d9;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 50px;
+    height: 100vh;
+    margin: 0;
 }
-
-.logo {
-    width: 120px;
-    height: 48px;
-    background-color: #0A3871;
-}
-
-.menu-toggle {
-    cursor: pointer;
-}
-
-.main-content {
-    display: flex;
-    gap: 20px;
+.container {
+    width: 100%;
+    height: 100%;
     position: relative;
 }
-
-.left-panel{
-    background-color: #F3F5FC;
-    padding: 20px;
-    margin-left: 10%;
+img{
+    max-width: 40px;
+    max-height: 50px;
+    margin-left: 2%;
+    margin-top: 1%;
 }
-
-.right-panel {
-    margin-left: 20%;
-    margin-right: 5%;
-    flex: 1;
-    background-color: #FFFFFF;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.panel-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0A3871;
-    margin-bottom: 10px;
-}
-
-.textarea-container {
-    margin-bottom: 20px;
+::placeholder{
+    color: #004999;
 }
 
 textarea {
-    width: 100%;
-    min-height: 200px;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    resize: vertical;
+    font-size:20px;
+    width: 50%;
+    height: 10%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0 none;
+    resize: none;
+    background-color: #F3F5FC;
+}
+textarea:focus, input:focus, select:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 
-.button-container {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.button {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #0A3871;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.result-container {
-    min-height: 400px;
+#input-text {
+    margin-top: 5%;
+    width: 60%;
     padding: 20px;
-    background-color: #FFFFFF;
-    border-radius: 16px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
-.result-textarea {
-    width: 100%;
-    height: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    resize: vertical;
+#output-text {
+    padding: 20px;
+    text-align: center;
+    max-width: 220px;
+    height: 65%;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    position: absolute;
+    left: 75%;
+    top: 15%;
 }
-.copy-button {
-    margin-top: 50px;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFFFFF;
+
+.buttons {
+    display: flex;
+    margin-left: 20%;
+}
+
+button {
+    width: 160px;
+    height: 40px;
     background-color: #0A3871;
+    color: #FFFFFF;
     border: none;
-    border-radius: 8px;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 24px;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%;
+}
+#decrypt-btn{
+    background-color: #fff;
+    color: #0A3871;
+}
+#decrypt-btn:hover{
+    background-color: #0A3871;
+    color: #fff;
+}
+button:hover {
+    background-color: #fff;
+    color: #0A3871;
 }
 
-.copy-button:hover {
-    background-color: #064c91;
+#copy-btn {
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #FFFFFF;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    position: absolute;
+    left: 82.5%;
+    top: 78%;
+    border-radius: 24px;
+}
+
+#copy-btn:hover {
+    background-color: #0A3871;
+    color: #fff;
 }
 
 .info-paragraph {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 22.5%;
+    margin-top: 20%;
     font-size: 14px;
     color: #888;
-    text-align: center;
-}
 
+}
 .footer {
     text-align: center;
     padding: 10px 0;
@@ -150,49 +126,33 @@ textarea {
     font-size: 14px;
     color: #888;
 }
-@media screen and (max-width: 1024px) {
+
+.explanation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 252px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+    font-size: 12px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
     .container {
         padding: 10px;
     }
 
-    .main-content {
+    .buttons-container {
         flex-direction: column;
     }
 
-    .button-container {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .result-container {
-        min-height: 300px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .left-panel, .right-panel {
-        padding: 10px;
-    }
-
-    .panel-title {
-        font-size: 20px;
-    }
-
-    .result-container {
-        min-height: 200px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .logo {
-        width: 100px;
-        height: 40px;
-    }
-
-    .panel-title {
-        font-size: 18px;
+    .buttons-container button {
+        margin-top: 10px;
     }
 }
